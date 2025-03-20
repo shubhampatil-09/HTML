@@ -1,0 +1,28 @@
+<!--WAJS to validate email-->
+<!--Shubham Patil-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Coding</title>
+    <script>
+        function validate() {
+            var email1 = document.getElementById("em").value;
+            var re_em = /^([a-zA-Z0-9\.\-]+)@([a-zA-Z0-9\-]+)\.([a-z]+)(\.[a-z]+)?$/;
+            
+            if (re_em.test(email1)) {
+                alert("valid");
+            } else {
+                alert("invalid");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="validate()">
+        <label>Enter email</label>
+        <input type="text" id="em" autocomplete="off"><br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!--radio button using IdElement-->
+
+<!DOCTYPE html>
+<html>
+<head>
+   <script>
+      function f1()
+     {
+        var x = document.getElementById("ad");
+        var y = x.options[x.selectedIndex].value;
+         if(y=="")
+        {
+           alert("please select the value");
+           return false;
+        }
+        else
+        {
+           document.write("option selected is ="+y);
+           return true;
+        }
+      }
+   </script>
+   
+</head>
+<body>
+   <form onsubmit="return f1()">
+   <label>Enter your branch</label>
+   
+    
+       <input type="radio" id="comp" name="branch" value ="comp">computer 
+        <input type="radio" id="ece" name="branch" value ="ece">ECE 
+          <input type="radio" id="civil" name="branch" value ="civil">Civil 
+            <input type="radio" id="ecomp" name="branch" value ="ecomp">ECOMP 
+             
+   
+     <input type="submit">
+   </form>
+</body>
+</html>
+

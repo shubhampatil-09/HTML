@@ -1,12 +1,26 @@
+<!--demonstrate getElementsByClassName()-->
+ <!--Shubham Patil-->
+ 
+<!DOCTYPE html>
 <html>
-<script>
-   var a = 99;
-   var b = "comp";
-   var c = false;
-   
-   document.write("<br>Value of a is " + typeof a);
-   document.write("<br>Value of b is " + typeof b);
-   document.write("<br>Value of c is " + typeof c);
-   
-</script>
+<head>
+    <script>
+         function f1() {
+            var a = document.getElementsByClassName("c1");
+            for (var i = 0; i < a.length; i++) {
+                a[i].style.fontSize = "25px";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p id="p1" class="c1"> AICTE </p>
+    <p id="p2" class="c2"> Engineering </p>
+    <p id="p3" class="c3"> MBBS </p>
+    <p id="p4" class="c4"> Pharmacy </p>
+    <a href="#" class="c1"> This is a link </a>
+    <button type="button" onclick="f1()"> Click me! </button>
+	 
+    
+</body>
 </html>

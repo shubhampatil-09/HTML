@@ -1,0 +1,52 @@
+<!--simple textboxes-->
+<!--Shubham Patil-->
+
+<!Doctype HTML>
+<html>
+<head>
+	<title>Prog1</title>
+	
+	<script>
+	function f1()
+	{
+	    var fname = "";
+		var lname = "";
+		
+		fname = document.getElementById("fn").value;
+		lname = document.getElementById("ln").value;
+		
+		if(fname=="")
+		{
+			alert("First cannot be empty");
+			return false;
+		}
+			
+		else if(lname=="")
+		{
+			alert("Last cannot be empty");
+			return false;
+		}
+			
+		else
+		{
+			document.write("First Name is " +fname);
+			document.write("<br>Last Name is " +lname);
+			return true;
+		}
+	}
+	</script>
+<head>
+
+<body>
+	<form onsubmit="f1()" action="test.html">
+	<label>Enter Your First Name</label>
+	<input type="text" id="fn"><br>
+	
+	<label>Enter Your Last Name</label>
+	<input type="text" id="ln"><br>
+	
+	<input type="Submit">
+	</form>
+</body>
+
+</html>

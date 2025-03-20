@@ -1,0 +1,25 @@
+<!--WAJS to implement the following. When a button is clicked, all the <p> elements font size should increase to 30px 
+and their background color should change to orange color-->
+<!--Shubham Patil-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function f1()
+        {
+            var x=document.getElementsByTagName("p");
+            for(var i=0;i<x.length;i++)
+            {
+                x[i].style.fontSize="30px";
+                x[i].style.backgroundColor="orange";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Engineering</p>
+    <p>MBBS</p>
+    <button onclick="f1()">Click here</button>
+</body>
+</html>

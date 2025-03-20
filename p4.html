@@ -1,13 +1,41 @@
+<!--checkbox--->
+<!--Shubham Patil-->
+
+<!DOCTYPE html>
 <html>
+<head>
+	<title>checkbox JS</title>
+	
 <script>
-   var a = 99;
-   var b = "comp";
-   var c = false;
-   
-   document.write("<br>Value of a is " + a);
-   document.write("<br>Value of b is " + b);
-   document.write("<br>Value of c is " + c);
-   
-   document.write("<br><br><br>Value of a is " + a + " value of b is " + b + " value of c is " + c);
-</script>
+	function validate() {
+	
+	  //finding which checkbox are selected (languges)
+		var language = document.getElementsByName("lang");
+		var lan = "";
+		for (var i = 0; i < language.length; i++) {
+			if (language[i].checked==true) { 
+				 lan = lan + " " + language[i].value; }
+		}
+		
+		if (lan== "") {
+			alert("Please select  checkboxs.");
+			return false;
+		} else {
+			alert("Checkboxes selected are: " + lan);
+			return true;		}
+	}
+	</script>
+
+</head>
+<body>
+	<form onsubmit="return validate()" >
+	<!--checkboxes-->
+	<input type="checkbox" id="eng" name="lang" value="English">English<br>
+	<input type="checkbox" id="hin" name="lang" value="hindi">Hindi<br>
+	<input type="checkbox" id="kon" name="lang" value="konkani">konkani<br>
+    <!--Buttons-->
+	<input type="submit">
+	<input type="reset" value="Reset">
+	</form>
+</body>
 </html>

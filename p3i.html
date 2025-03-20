@@ -1,0 +1,28 @@
+<!--radio button using NameElement-->
+<!--Shubham Patil-->
+
+<!DOCTYPE html>
+<html>
+<head>
+   <script>
+      function validate() {
+          var x = document.getElementsByName("gender");
+          // Check if no radio button is selected
+          if ((x[0].checked == false) && (x[1].checked == false) && (x[2].checked == false)) {
+              alert("Please select gender");
+          } else {
+              alert("Gender selected");
+          }
+      }
+   </script>
+</head>
+<body>
+   <form>
+     <input type="radio" id="male" name="gender" value="male"> Male
+     <input type="radio" id="female" name="gender" value="female"> Female
+     <input type="radio" id="other" name="gender" value="other"> Other
+     <br>
+     <button type="button" onclick="validate()">Submit</button>
+   </form>
+</body>
+</html>

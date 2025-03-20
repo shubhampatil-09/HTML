@@ -1,0 +1,53 @@
+<!--WAJS to validate password-->
+<!--Shubham Patil-->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Password Validation</title>
+    <script>
+        function validate() {
+            var password = document.getElementById("pw").value;
+            
+            // Check password length between 6 and 8 characters
+            if (password.trim().length < 6 || password.trim().length > 8) {
+                alert("Password size must be between 6 to 8 characters");
+                return false;
+            } 
+            // Check for at least one uppercase letter
+            else if (password.search(/[A-Z]/) == -1) {
+                alert("Password must contain at least one uppercase letter");
+                return false;
+            } 
+            // Check for at least one lowercase letter
+            else if (password.search(/[a-z]/) == -1) {
+                alert("Password must contain at least one lowercase letter");
+                return false;
+            } 
+            // Check for at least one number
+            else if (password.search(/[0-9]/) == -1) {
+                alert("Password must contain at least one number");
+                return false;
+            } 
+            // Check for at least one special character
+            else if (password.search(/[@#$%&*:,.]/) == -1) {
+                alert("Password must contain at least one special character (@ # $ % & * : , .)");
+                return false;
+            } 
+            else {
+                alert("Password is valid");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validate()" action="v1.html">
+        <label for="pw">Enter Password</label>
+        <input type="text" id="pw" autocomplete="off"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

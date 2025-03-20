@@ -1,0 +1,29 @@
+<!--demonstrate getElementsByTagName()-->
+ <!--Shubham Patil-->
+ 
+ <!DOCTYPE html>
+<html>
+<head>
+    <script>
+         function myFunction()  {
+            var a = document.getElementsByTagName("p");
+            for (var i = 0; i < a.length; i++) {
+                a[i].style.fontSize = "30px";
+				a[i].style.color="blue";
+                a[i].style.backgroundColor="yellow";
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <p id="p1" class="c1"> AICTE </p>
+    <p id="p2" class="c2"> Engineering </p>
+    <p id="p3" class="c3"> MBBS </p>
+    <p id="p4" class="c4"> Pharmacy </p>
+    
+    <button type="button" onclick="myFunction()"> Click me! </button>
+	 
+    
+</body>
+</html>

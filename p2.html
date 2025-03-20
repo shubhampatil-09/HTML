@@ -1,83 +1,44 @@
+<!--Drop down-->
+<!--Shubham Patil-->
+
+<!Doctype HTML>
 <html>
 <head>
-  
-  <caption>Student Detail </caption>
-  <table border="2"><br><br>
-  </head>
-  <body>
-       
-	   <tr>
-	   <th> roll no. </th>
-	   <th> student name </th>
-	   <th> student pencentage </th>
-	   </tr>
-	    <tr>
-		<th> 91 </th>
-		<th> Amit </th>
-		<th> 75% </th>
-		</tr>
-		<tr>
-		<th> 92 </th>
-		<th> Yash </th>
-		<th> 85% </th>
-		</tr>
-		</table>
-		</body>
-		</html><br><br>
+	<title>Prog2</title>
+	
+	<script>
+	function f1()
+	{
 		
-		<ul type = "1" >
-		<li> coffee </li>
-		<li> Tea </li>
-		<li> Milk </li>
-		</ul><br><br>
+		var x = document.getElementById("ad");
+		var y = x.options[x.selectedIndex].value;
 		
-		<table border="2">
-		<caption>student admin </caption>
-		<tr>
-		<th> roll no </th>
-		<th> <colspan="2">Information</th>
-		</tr>
-		<tr>
-		<th> 91 </th>
-		<th> Amit </th>
-		<th> 75% </th>
-		</tr>
-		<tr>
-		<th> <colspan="3"> 92 only </th>
-		</tr>
-		</table>
+		if(y=="")
+		{
+			alert("Pls select one value");
+			return false;
+		}
+			
+		else
+		{
+			alert("Selected value is " +y);
+			return true;
+		} 
+	}
+	</script>
+<head>
+
+<body>
+	<form onsubmit="f1()">
+		<select id="ad">
+			<option></option>
+			<option value="Comp">COMP</option>
+			<option value="Ece">ECE</option>
+			<option value="Mech">MECH</option>
+		</select>
 		
-		<dl> Computer </dl>
-		<dd> study of programming </dd>
-		<dl> Mechanical </dl>
-		<dd> study of Machine </dd>
-		<dl> ECE </dl>
-		<dd> study of circuit </dd><br><br>
-		
-		<form action ="  " method="   ">
-		<lable> Enter first name </lable>
-		<input type = 1st name "text"><br><br>
-		<lable> Enter last name </lable>
-		<input type = last name"text"><br><br>
-		<input type ="submit"><br><br>
-		<input type ="reset"><br><br>
-		
-		<lable> plz select ur hobbies </lable><br>
-		<input type="checkbox"id="singing"name="singing" value="singing">singing<br>
-		<input type="checkbox"id="cricket"name="cricket" value="singing">criket<br>
-		<input type="checkbox"id="programming"name="programming" value="singing">programming<br>
-		<input type ="submit"><br><br>
-		
-		<lable>plz select your state </lable><br>
-		<select>
-		<option value=""> </option>
-	    <option value="Delhi">delhi </option>
-		<option value="Goa">goa </option>
-		<option value="Tamil Nadu">tamil nadu </option>
-		</select><br><br>
-		
-		
-		
-		 
-		
-  
+		<input type="Submit">
+	</form>
+</body>
+
+</html>
